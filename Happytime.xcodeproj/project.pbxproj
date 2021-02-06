@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26251A1B25C3CB0700A311C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26251A1A25C3CB0700A311C3 /* ImagePicker.swift */; };
+		26251A2025C5490B00A311C3 /* DatePickerWithButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */; };
+		26A12AF125AFFF1900193DB3 /* HappytimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12AF025AFFF1900193DB3 /* HappytimeApp.swift */; };
+		26A12AF525AFFF1B00193DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A12AF425AFFF1B00193DB3 /* Assets.xcassets */; };
+		26A12AF825AFFF1B00193DB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A12AF725AFFF1B00193DB3 /* Preview Assets.xcassets */; };
+		26A12B0325AFFF1B00193DB3 /* HappytimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B0225AFFF1B00193DB3 /* HappytimeTests.swift */; };
+		26A12B0E25AFFF1B00193DB3 /* HappytimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B0D25AFFF1B00193DB3 /* HappytimeUITests.swift */; };
+		26A12B2025B0004D00193DB3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 26A12B1F25B0004D00193DB3 /* Realm */; };
+		26A12B2225B0004D00193DB3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26A12B2125B0004D00193DB3 /* RealmSwift */; };
+		26A12B3125B000DE00193DB3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B3025B000DE00193DB3 /* Home.swift */; };
+		26A12B3625B0022400193DB3 /* AddPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B3525B0022400193DB3 /* AddPageView.swift */; };
+		26A12B3B25B0035700193DB3 /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B3A25B0035700193DB3 /* DBViewModel.swift */; };
+		26A12B4025B00DF200193DB3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12B3F25B00DF200193DB3 /* Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26A12AFF25AFFF1B00193DB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26A12AE525AFFF1900193DB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A12AEC25AFFF1900193DB3;
+			remoteInfo = Happytime;
+		};
+		26A12B0A25AFFF1B00193DB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26A12AE525AFFF1900193DB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A12AEC25AFFF1900193DB3;
+			remoteInfo = Happytime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26251A1A25C3CB0700A311C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWithButtons.swift; sourceTree = "<group>"; };
+		26A12AED25AFFF1900193DB3 /* Happytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A12AF025AFFF1900193DB3 /* HappytimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappytimeApp.swift; sourceTree = "<group>"; };
+		26A12AF425AFFF1B00193DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26A12AF725AFFF1B00193DB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26A12AF925AFFF1B00193DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A12AFE25AFFF1B00193DB3 /* HappytimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappytimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A12B0225AFFF1B00193DB3 /* HappytimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappytimeTests.swift; sourceTree = "<group>"; };
+		26A12B0425AFFF1B00193DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A12B0925AFFF1B00193DB3 /* HappytimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappytimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A12B0D25AFFF1B00193DB3 /* HappytimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappytimeUITests.swift; sourceTree = "<group>"; };
+		26A12B0F25AFFF1B00193DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A12B3025B000DE00193DB3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		26A12B3525B0022400193DB3 /* AddPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageView.swift; sourceTree = "<group>"; };
+		26A12B3A25B0035700193DB3 /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
+		26A12B3F25B00DF200193DB3 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26A12AEA25AFFF1900193DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A12B2225B0004D00193DB3 /* RealmSwift in Frameworks */,
+				26A12B2025B0004D00193DB3 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12AFB25AFFF1B00193DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12B0625AFFF1B00193DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26A12AE425AFFF1900193DB3 = {
+			isa = PBXGroup;
+			children = (
+				26A12AEF25AFFF1900193DB3 /* Happytime */,
+				26A12B0125AFFF1B00193DB3 /* HappytimeTests */,
+				26A12B0C25AFFF1B00193DB3 /* HappytimeUITests */,
+				26A12AEE25AFFF1900193DB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26A12AEE25AFFF1900193DB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26A12AED25AFFF1900193DB3 /* Happytime.app */,
+				26A12AFE25AFFF1B00193DB3 /* HappytimeTests.xctest */,
+				26A12B0925AFFF1B00193DB3 /* HappytimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26A12AEF25AFFF1900193DB3 /* Happytime */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B2C25B000CE00193DB3 /* ViewModel */,
+				26A12B2725B000BB00193DB3 /* Model */,
+				26A12B2625B000A500193DB3 /* View */,
+				26A12AF025AFFF1900193DB3 /* HappytimeApp.swift */,
+				26A12AF425AFFF1B00193DB3 /* Assets.xcassets */,
+				26A12AF925AFFF1B00193DB3 /* Info.plist */,
+				26A12AF625AFFF1B00193DB3 /* Preview Content */,
+			);
+			path = Happytime;
+			sourceTree = "<group>";
+		};
+		26A12AF625AFFF1B00193DB3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				26A12AF725AFFF1B00193DB3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26A12B0125AFFF1B00193DB3 /* HappytimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B0225AFFF1B00193DB3 /* HappytimeTests.swift */,
+				26A12B0425AFFF1B00193DB3 /* Info.plist */,
+			);
+			path = HappytimeTests;
+			sourceTree = "<group>";
+		};
+		26A12B0C25AFFF1B00193DB3 /* HappytimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B0D25AFFF1B00193DB3 /* HappytimeUITests.swift */,
+				26A12B0F25AFFF1B00193DB3 /* Info.plist */,
+			);
+			path = HappytimeUITests;
+			sourceTree = "<group>";
+		};
+		26A12B2625B000A500193DB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B3025B000DE00193DB3 /* Home.swift */,
+				26A12B3525B0022400193DB3 /* AddPageView.swift */,
+				26251A1A25C3CB0700A311C3 /* ImagePicker.swift */,
+				26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26A12B2725B000BB00193DB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B3F25B00DF200193DB3 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26A12B2C25B000CE00193DB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				26A12B3A25B0035700193DB3 /* DBViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26A12AEC25AFFF1900193DB3 /* Happytime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A12B1225AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "Happytime" */;
+			buildPhases = (
+				26A12AE925AFFF1900193DB3 /* Sources */,
+				26A12AEA25AFFF1900193DB3 /* Frameworks */,
+				26A12AEB25AFFF1900193DB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Happytime;
+			packageProductDependencies = (
+				26A12B1F25B0004D00193DB3 /* Realm */,
+				26A12B2125B0004D00193DB3 /* RealmSwift */,
+			);
+			productName = Happytime;
+			productReference = 26A12AED25AFFF1900193DB3 /* Happytime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26A12AFD25AFFF1B00193DB3 /* HappytimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A12B1525AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "HappytimeTests" */;
+			buildPhases = (
+				26A12AFA25AFFF1B00193DB3 /* Sources */,
+				26A12AFB25AFFF1B00193DB3 /* Frameworks */,
+				26A12AFC25AFFF1B00193DB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26A12B0025AFFF1B00193DB3 /* PBXTargetDependency */,
+			);
+			name = HappytimeTests;
+			productName = HappytimeTests;
+			productReference = 26A12AFE25AFFF1B00193DB3 /* HappytimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26A12B0825AFFF1B00193DB3 /* HappytimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A12B1825AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "HappytimeUITests" */;
+			buildPhases = (
+				26A12B0525AFFF1B00193DB3 /* Sources */,
+				26A12B0625AFFF1B00193DB3 /* Frameworks */,
+				26A12B0725AFFF1B00193DB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26A12B0B25AFFF1B00193DB3 /* PBXTargetDependency */,
+			);
+			name = HappytimeUITests;
+			productName = HappytimeUITests;
+			productReference = 26A12B0925AFFF1B00193DB3 /* HappytimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26A12AE525AFFF1900193DB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					26A12AEC25AFFF1900193DB3 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					26A12AFD25AFFF1B00193DB3 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 26A12AEC25AFFF1900193DB3;
+					};
+					26A12B0825AFFF1B00193DB3 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 26A12AEC25AFFF1900193DB3;
+					};
+				};
+			};
+			buildConfigurationList = 26A12AE825AFFF1900193DB3 /* Build configuration list for PBXProject "Happytime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26A12AE425AFFF1900193DB3;
+			packageReferences = (
+				26A12B1E25B0004D00193DB3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
+			productRefGroup = 26A12AEE25AFFF1900193DB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26A12AEC25AFFF1900193DB3 /* Happytime */,
+				26A12AFD25AFFF1B00193DB3 /* HappytimeTests */,
+				26A12B0825AFFF1B00193DB3 /* HappytimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26A12AEB25AFFF1900193DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A12AF825AFFF1B00193DB3 /* Preview Assets.xcassets in Resources */,
+				26A12AF525AFFF1B00193DB3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12AFC25AFFF1B00193DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12B0725AFFF1B00193DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26A12AE925AFFF1900193DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A12B4025B00DF200193DB3 /* Card.swift in Sources */,
+				26A12B3B25B0035700193DB3 /* DBViewModel.swift in Sources */,
+				26A12B3625B0022400193DB3 /* AddPageView.swift in Sources */,
+				26251A1B25C3CB0700A311C3 /* ImagePicker.swift in Sources */,
+				26251A2025C5490B00A311C3 /* DatePickerWithButtons.swift in Sources */,
+				26A12B3125B000DE00193DB3 /* Home.swift in Sources */,
+				26A12AF125AFFF1900193DB3 /* HappytimeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12AFA25AFFF1B00193DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A12B0325AFFF1B00193DB3 /* HappytimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A12B0525AFFF1B00193DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A12B0E25AFFF1B00193DB3 /* HappytimeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26A12B0025AFFF1B00193DB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A12AEC25AFFF1900193DB3 /* Happytime */;
+			targetProxy = 26A12AFF25AFFF1B00193DB3 /* PBXContainerItemProxy */;
+		};
+		26A12B0B25AFFF1B00193DB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A12AEC25AFFF1900193DB3 /* Happytime */;
+			targetProxy = 26A12B0A25AFFF1B00193DB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26A12B1025AFFF1B00193DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26A12B1125AFFF1B00193DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26A12B1325AFFF1B00193DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Happytime/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Happytime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.Happytime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26A12B1425AFFF1B00193DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Happytime/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Happytime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.Happytime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26A12B1625AFFF1B00193DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				INFOPLIST_FILE = HappytimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.HappytimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happytime.app/Happytime";
+			};
+			name = Debug;
+		};
+		26A12B1725AFFF1B00193DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				INFOPLIST_FILE = HappytimeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.HappytimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happytime.app/Happytime";
+			};
+			name = Release;
+		};
+		26A12B1925AFFF1B00193DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				INFOPLIST_FILE = HappytimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.HappytimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happytime;
+			};
+			name = Debug;
+		};
+		26A12B1A25AFFF1B00193DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				INFOPLIST_FILE = HappytimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.HappytimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Happytime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26A12AE825AFFF1900193DB3 /* Build configuration list for PBXProject "Happytime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A12B1025AFFF1B00193DB3 /* Debug */,
+				26A12B1125AFFF1B00193DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26A12B1225AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "Happytime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A12B1325AFFF1B00193DB3 /* Debug */,
+				26A12B1425AFFF1B00193DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26A12B1525AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "HappytimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A12B1625AFFF1B00193DB3 /* Debug */,
+				26A12B1725AFFF1B00193DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26A12B1825AFFF1B00193DB3 /* Build configuration list for PBXNativeTarget "HappytimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A12B1925AFFF1B00193DB3 /* Debug */,
+				26A12B1A25AFFF1B00193DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26A12B1E25B0004D00193DB3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26A12B1F25B0004D00193DB3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A12B1E25B0004D00193DB3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		26A12B2125B0004D00193DB3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A12B1E25B0004D00193DB3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 26A12AE525AFFF1900193DB3 /* Project object */;
+}

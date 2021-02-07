@@ -22,6 +22,8 @@ class DBViewModel: ObservableObject {
     // Fetched Data
     @Published var cards: [Card] = []
     
+    @Published var targetDates: [Date] = []
+    
     @Published var updateObject: Card?
     
     init() {
@@ -46,6 +48,7 @@ class DBViewModel: ObservableObject {
         Realm.Configuration.defaultConfiguration = config
         
         fetchData()
+        print(targetDates)
     }
     
     func fetchData() {
@@ -58,6 +61,10 @@ class DBViewModel: ObservableObject {
         self.cards = results.compactMap({ (card) -> Card? in
             return card
         })
+        
+//        let results2 = dbRef.objects(Card.self).value(forKey: "targetDate") as! [Date]
+//        self.targetDates = results2
+        
     }
     
     func addData(presentation: Binding<PresentationMode>) {
@@ -116,6 +123,18 @@ class DBViewModel: ObservableObject {
         feeling = ""
         detail = ""
         targetDate = Date()
+    }
+    
+    func fetchPrevMonth() {
+        self.displayedDate = Calendar.current.date(byAdding: .month, value: -1, to: displayedDate)!
+        
+        fetchData()
+    }
+    
+    func fetchNextMonth() {
+        self.displayedDate = Calendar.current.date(byAdding: .month, value: 1, to: displayedDate)!
+        
+        fetchData()
     }
 }
 

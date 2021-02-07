@@ -9,28 +9,33 @@ import SwiftUI
 
 struct DatePickerWithButtons: View {
     @Binding var showDatePicker: Bool
-    @Binding var savedDate: Date?
+    @Binding var savedDate: Date
     @State var selectedDate: Date = Date()
     
     var body: some View {
         ZStack {
             
-            Color.black.opacity(0.3)
-                .edgesIgnoringSafeArea(.all)
+            Color.black.opacity(1.3)
+                .onTapGesture {
+                    showDatePicker = false
+                }
+//            Image("5")
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .edgesIgnoringSafeArea(.all)
+//                .blur(radius: 10.0)
+//                .onTapGesture {
+//                    showDatePicker = false
+//                }
             
             
             VStack {
-                DatePicker("Test", selection: $selectedDate, displayedComponents: [.date])
+                DatePicker("", selection: $selectedDate, displayedComponents: [.date])
                     .datePickerStyle(GraphicalDatePickerStyle())
-                
-                Divider()
+                    .accentColor(Color(UIColor.systemRed))
+//                    .transformEffect(.init(scaleX: 0.8, y: 0.8))
+//                Divider()
                 HStack {
-                    
-                    Button(action: {
-                        showDatePicker = false
-                    }, label: {
-                        Text("Cancel")
-                    })
                     
                     Spacer()
                     
@@ -38,9 +43,12 @@ struct DatePickerWithButtons: View {
                         savedDate = selectedDate
                         showDatePicker = false
                     }, label: {
-                        Text("Save".uppercased())
-                            .bold()
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+//                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 25, height: 25)
                     })
+                    
                     
                 }
                 .padding(.horizontal)
@@ -48,8 +56,8 @@ struct DatePickerWithButtons: View {
             }
             .padding()
             .background(
-                Color.white
-                    .cornerRadius(30)
+                Color(UIColor.systemBackground)
+                    .cornerRadius(5)
             )
 
             

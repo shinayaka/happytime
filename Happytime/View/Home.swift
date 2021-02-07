@@ -10,7 +10,7 @@ import SwiftUI
 struct Home: View {
     
     @StateObject var modelData = DBViewModel()
-    @State var showDatePicker: Bool = false
+    @State var text = "start"
     
 //    @State private var image = UIImage()
 //    @State private var isShowPhotoLibrary = false
@@ -24,15 +24,16 @@ struct Home: View {
             ScrollView {
                 
                 VStack() {
-                    if showDatePicker {
-                        ZStack() {
-                            DatePicker("",selection: $modelData.targetDate, displayedComponents: .date)
-                                .datePickerStyle(GraphicalDatePickerStyle())
-    //                            .labelsHidden()
-                                .accentColor(Color(UIColor.systemRed))
-
-                        }
-                    }
+//                    Text(text)
+//                    if showDatePicker {
+//                        ZStack() {
+//                            DatePicker("",selection: $modelData.targetDate, displayedComponents: .date)
+//                                .datePickerStyle(GraphicalDatePickerStyle())
+//    //                            .labelsHidden()
+//                                .accentColor(Color(UIColor.systemRed))
+//
+//                        }
+//                    }
 
 //                    Image(uiImage: self.image)
 //                        .resizable()
@@ -45,64 +46,90 @@ struct Home: View {
 //                        Text("Photo Library")
 //                            .padding()
 //                    })
+//                    print(modelData.targetDates)
+//                    for a in modelData.targetDates {
+//                        VStack() {
+//                            Text("\(Calendar.current.component(.day, from: a))")
+//                        }
+//                    }
 
                     ForEach(modelData.cards){card in
                             
-                            HStack(spacing: 10) {
-                                VStack() {
-                                    Text("\(Calendar.current.component(.day, from: card.targetDate))").font(.headline)
-                                    Text(getWeekday(date:card.targetDate)).font(.subheadline)
-                                }
-                                .frame(width: 40)
-                                Image(card.feeling)
+                        HStack(spacing: 10) {
+                            VStack() {
+                                Text("\(Calendar.current.component(.day, from: card.targetDate))").font(.headline)
+                                Text(getWeekday(date:card.targetDate)).font(.subheadline)
+                            }
+                            .frame(width: 40)
+                            Image(card.feeling)
 //                                Image("feeling")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
 //                                    .colorMultiply(Color.red)
-                                    .frame(width: 50, height: 50)
-                                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/, style: FillStyle())
-                                Text(card.detail)
-                                    .lineLimit(2)
-                                Spacer()
-                            }
-                            .padding(10)
-                            .background(Color.gray.opacity(0.15))
-                            .cornerRadius(10)
-                            .contextMenu(menuItems: {
-                                Button(action: {modelData.deleteData(card: card)}, label: {
-                                    Text("Delete")
-                                })
-                            })
-                            .onTapGesture {
-                                modelData.updateObject = card
-                                modelData.openNewPage.toggle()
-                            }
-                            
-                            
+                                .frame(width: 50, height: 50)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/, style: FillStyle())
+                            Text(card.detail)
+                                .lineLimit(2)
+                            Spacer()
                         }
-
+                        .padding(10)
+                        .background(Color.gray.opacity(0.15))
+                        .cornerRadius(10)
+                        .contextMenu(menuItems: {
+                            Button(action: {modelData.deleteData(card: card)}, label: {
+                                Image(systemName: "trash")
+                            })
+                        })
+                        .onTapGesture {
+                            modelData.updateObject = card
+                            modelData.openNewPage.toggle()
+                        }
+                    }
                 }
                 .padding()
                 
             }
+            .gesture(DragGesture()
+                .onEnded({ value in
+                    if (abs(value.translation.width) < 10) { return } // too small movement, ignore note: 10 is default value for minimumDistance
+                    if (value.translation.width < 0 ) {
+                        // swiped to left
+                        text = "swipe to left"
+                        modelData.fetchNextMonth()
+                        
+                    } else if (value.translation.width > 0 ) {
+                        // swiped to right
+                        text = "swipe to right"
+                        modelData.fetchPrevMonth()
+                    }
+                })
+            )
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 // Right
-                ToolbarItem(placement: .navigationBarTrailing) {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Button(action: {modelData.openNewPage.toggle()}) {
+//                        Image(systemName: "square.and.pencil")
+//                            
+//                    }
+//                }
+                // Center
+                ToolbarItem(placement: .principal) {
+//                    Button(action: {
+//                        showDatePicker.toggle()
+//
+//                    }) {
+                        Text(getMonth(date:modelData.displayedDate)).font(.title)
+//                    }
+                }
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Spacer()
                     Button(action: {modelData.openNewPage.toggle()}) {
                         Image(systemName: "square.and.pencil")
                             
                     }
-                }
-                // Center
-                ToolbarItem(placement: .principal) {
-                    Button(action: {
-                        showDatePicker.toggle()
-                        
-                    }) {
-                        Text(getMonth(date:modelData.displayedDate)).font(.title)
-                    }
+                    Spacer()
                 }
                     
             }

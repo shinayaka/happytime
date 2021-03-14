@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26251A1B25C3CB0700A311C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26251A1A25C3CB0700A311C3 /* ImagePicker.swift */; };
 		26251A2025C5490B00A311C3 /* DatePickerWithButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */; };
 		26A12AF125AFFF1900193DB3 /* HappytimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12AF025AFFF1900193DB3 /* HappytimeApp.swift */; };
 		26A12AF525AFFF1B00193DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A12AF425AFFF1B00193DB3 /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26251A1A25C3CB0700A311C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWithButtons.swift; sourceTree = "<group>"; };
 		26A12AED25AFFF1900193DB3 /* Happytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A12AF025AFFF1900193DB3 /* HappytimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappytimeApp.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				26A12B3025B000DE00193DB3 /* Home.swift */,
 				26A12B3525B0022400193DB3 /* AddPageView.swift */,
-				26251A1A25C3CB0700A311C3 /* ImagePicker.swift */,
 				26251A1F25C5490B00A311C3 /* DatePickerWithButtons.swift */,
 			);
 			path = View;
@@ -312,7 +309,6 @@
 				26A12B4025B00DF200193DB3 /* Card.swift in Sources */,
 				26A12B3B25B0035700193DB3 /* DBViewModel.swift in Sources */,
 				26A12B3625B0022400193DB3 /* AddPageView.swift in Sources */,
-				26251A1B25C3CB0700A311C3 /* ImagePicker.swift in Sources */,
 				26251A2025C5490B00A311C3 /* DatePickerWithButtons.swift in Sources */,
 				26A12B3125B000DE00193DB3 /* Home.swift in Sources */,
 				26A12AF125AFFF1900193DB3 /* HappytimeApp.swift in Sources */,
@@ -473,8 +469,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Happytime/Preview Content\"";
-				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				DEVELOPMENT_TEAM = Z298D8YZL6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Happytime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -482,7 +479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.Happytime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinayaka.HappyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,8 +492,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Happytime/Preview Content\"";
-				DEVELOPMENT_TEAM = 5PTSB46WG5;
+				DEVELOPMENT_TEAM = Z298D8YZL6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Happytime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -504,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shinayaka.Happytime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinayaka.HappyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

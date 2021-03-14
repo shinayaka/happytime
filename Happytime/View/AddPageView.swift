@@ -8,23 +8,20 @@
 import SwiftUI
 
 struct AddPageView: View {
+    
     @EnvironmentObject var modelData: DBViewModel
     @Environment(\.presentationMode) var presentation
     @State var showDatePicker: Bool = false
-    @State var savedDate: Date? = nil
-//    @State var state: String = "Closed"
     
     var body: some View {
         
-        
         NavigationView {
+
             ZStack {
             
                 VStack(spacing: 10) {
                     
-//                    Text(state)
-                                
-                    HStack() {
+                    HStack {
                         let images = ["1","2","3","4","5"]
                         
                         ForEach(images, id: \.self) {image in
@@ -46,26 +43,18 @@ struct AddPageView: View {
                                         .foregroundColor(.white)
                                         .frame(width: 50, height: 50)
                                 }
-                                Spacer()
                             }
-                            
                         }
                     }
                     .padding(10)
-    //                .background(Color.gray.opacity(0.15))
-    //                .cornerRadius(10)
-//                    DatePicker("",selection: $modelData.targetDate, displayedComponents: .date)
-//                        .datePickerStyle(DefaultDatePickerStyle())
-//                        .accentColor(Color(UIColor.systemRed))
-                    
+
                     TextEditor(text: $modelData.detail)
-                        //.autocapitalization(.none)
                         .padding(10)
-    //                    .background(Color.gray.opacity(0.15))
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray.opacity(0.15), lineWidth: 5))
                     
                     HStack() {
                         Spacer()
+                        
                         Button(action: {
                             modelData.addData(presentation: presentation)
                         }, label: {
@@ -74,19 +63,15 @@ struct AddPageView: View {
                                 .frame(width: 25, height: 25)
                         })
                     }
+                    .contentShape(Rectangle())
+                    .onTapGesture(perform: {
+                        UIApplication.shared.closeKeyboard()
+                    })
                 }
                 .padding()
                 .navigationTitle("")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-//                    ToolbarItem(placement: .navigationBarTrailing) {
-//                        Button(action: {
-//                            modelData.addData(presentation: presentation)
-//                        }, label: {
-//                            Image(systemName: "checkmark.circle")
-//                        })
-//                    }
-
                     // Center
                     ToolbarItem(placement: .principal) {
                         Button(action: {
@@ -95,7 +80,6 @@ struct AddPageView: View {
                         }, label: {
                             Text(getDay(date:modelData.targetDate))
                         })
-                        
                     }
                     // Left
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -105,15 +89,6 @@ struct AddPageView: View {
                             Image(systemName: "multiply")
                         })
                     }
-//                    ToolbarItemGroup(placement: .bottomBar) {
-//                        Spacer()
-//                        Button(action: {
-//                            modelData.addData(presentation: presentation)
-//                        }, label: {
-//                            Image(systemName: "checkmark.circle")
-//                        })
-//                    }
-
                 }
                 
                 if showDatePicker {
@@ -122,11 +97,6 @@ struct AddPageView: View {
                         .transition(.opacity)
                 }
             }
-//            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
-//                self.state = "Opened"
-//            }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
-//                self.state = "Closed"
-//            }
         }
         .accentColor(Color("label"))
         .onAppear(perform: modelData.setUpInitialData)
